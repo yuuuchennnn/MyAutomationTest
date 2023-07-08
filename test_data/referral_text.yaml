@@ -1,0 +1,2 @@
+url: "https://api2.bybit.com/s1/campaign/referral/commission/get_faqs_and_terms"
+request_data : '{"lang":"en-US"}'
