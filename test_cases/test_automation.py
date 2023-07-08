@@ -1,13 +1,13 @@
 import pytest
-# content of test_sample.py
-
+from tools.data_loader import yaml_data_loader
+import yaml
+from components import referral_check_success
+from components.referral_check_success import CheckRetCode
 
 class TestClass:
-    def test_one(self):
-        x = "this"
-        assert "h" in x
+    @pytest.mark.parametrize("test_data", yaml_data_loader("referral_text.yaml"))
+    def test_referral_page_text(self, test_data: dict):
+        checker = CheckRetCode(test_data)
+        checker.check_referral_page_ret_code()
 
-    def test_two(self):
-        x = "hello"
-        assert hasattr(x, "check")
-    @pytest.mark.parametrize()
+
