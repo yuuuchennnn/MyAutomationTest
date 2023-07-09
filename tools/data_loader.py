@@ -10,7 +10,7 @@ def yaml_data_loader(file_name):
 
     with open(yaml_absolute_path, "r") as stream:
         try:
-            return [yaml.safe_load(stream)]
+            return yaml.safe_load(stream)
         except yaml.YAMLError as exc:
             print(exc)
 
