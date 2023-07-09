@@ -5,7 +5,6 @@ import json
 
 class CheckRetCode:
     def __init__(self,test_data):
-        # self.test_data = test_data
         self.url = test_data["url"]
         self.request_data = json.loads(test_data["request_data"])
 
