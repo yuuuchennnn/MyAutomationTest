@@ -4,9 +4,9 @@ import json
 
 
 class CheckRetCode:
-    def __init__(self,test_data):
-        self.url = test_data["url"]
-        self.request_data = json.loads(test_data["request_data"])
+    def __init__(self, testData):
+        self.url = testData["test_data"]["url"]
+        self.request_data = json.loads(testData["test_data"]["request_data"])
 
     def check_referral_page_ret_code(self):
         get_faqs_and_terms = HttpAtom(self.url, self.request_data)
